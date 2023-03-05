@@ -1,0 +1,148 @@
+body{
+
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+    background-size: 300%;
+    background-image: linear-gradient(to bottom,#00c6fb, #053481);
+   
+
+     font-family: 'Lato', sans-serif;
+    
+   
+}
+
+.welcome{
+  color: aliceblue;
+  font-size:20px;
+  height: 46vh;
+}
+
+
+form{
+    margin-top: 0.8rem;
+    text-align: center;
+}
+input{
+    margin: 0.4rem;
+    border: 1px solid rgb(164, 164, 250);
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font: 1rem ;
+}
+input:focus{
+   
+    outline: 1px solid rgb(242, 144, 255);
+   
+}
+input::placeholder {
+  padding:0.8rem;
+  color: rgb(118, 118, 196); 
+}
+
+button{
+    border: 0.1rem solid rgb(164, 164, 250);
+    border-radius: 8px;
+}
+button:hover{
+    border: 0.15rem solid rgb(164, 164, 250);
+}
+
+label{
+    font-size: 1.5rem;
+}
+
+.suggestions{
+  height: 25vh;
+  text-align: center;
+  color: rgba(240, 248, 255, 0.74);
+  overflow: hidden;
+  width: 80vw;
+  margin-left: 10%;
+}
+
+.weather{
+
+  
+    display: block;
+    text-align: center;
+    
+   
+}
+
+.quote{
+    margin: 2.2rem;
+    text-align: center;
+    font-size: 20px;
+    color:rgb(224, 224, 224);
+
+    
+}
+.icon{
+    margin: 0.2rem;
+    font-size: 35px;
+    color: rgb(24, 14, 83);
+    font-weight: bold;
+}
+.temp{
+
+    font-size: 35px;
+    color:rgb(237, 237, 255);
+    
+}
+.temp:hover{
+
+    color:rgb(255, 236, 128);
+    
+}
+
+
+.cloud {
+  position: relative;
+  width: 150px;
+  height: 70px;
+  left:50vw;
+  top: 7vh;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 0 10px #ccc;
+  animation-name: move-cloud;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.cloud::before {
+  width: 50px;
+  height: 60px;
+  top: -30px;
+  left: 10px;
+}
+
+.cloud::after {
+  width: 90px;
+  height: 80px;
+  top: -40px;
+  right: 10px;
+}
+
+@keyframes move-cloud {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

@@ -113,8 +113,8 @@ export default function Quotes({icon}) {
             default:
               return (
                 <>
-                  <FaSun />
-                  <span> Nothing Special!</span>
+                  
+                  <span> </span>
                 </>
               );
         
@@ -125,9 +125,10 @@ export default function Quotes({icon}) {
 
 
               return (<>
+              <div className="quote">
 
              { selectQuote(icon) }
-            
+             </div>
 
   </>)
 }

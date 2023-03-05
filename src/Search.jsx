@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import axios from 'axios'
 
-import { FaSun, FaCloud, FaCloudSun, FaCloudRain } from 'react-icons/fa'
+import { FaSun, FaCloud, FaCloudSun, FaCloudRain, FaMoon, FaCloudMoon } from 'react-icons/fa'
 
 import Quotes from "./Quotes"
 
@@ -17,6 +17,8 @@ export default function Search() {
 
   function handleChange(e){
     setQuery(e.target.value)
+
+    
   }
 
   function getLatLong(city) {
@@ -69,36 +71,36 @@ export default function Search() {
     case "01d":
       return (
         <>
-          <FaSun />
-          <span> It'sa beautiful Sunny Day!!</span>
+          <FaSun /><br/>
+          <span> It's a beautiful Sunny Day!!</span>
         </>
       );
     case "01n":
       return (
         <>
-          <FaSun />
+          <FaMoon /><br/>
           <span> Starry Night!!</span>
         </>
       );
     case "02d":
       return (
         <>
-          <FaCloudSun />
-          <span> Day with Few Clouds</span>
+          <FaCloudSun /><br/>
+          <span> Overcast</span>
         </>
       );
     case "02n":
       return (
         <>
-          <FaCloudSun />
-          <span> Night with few clouds</span>
+          <FaCloudMoon /><br/>
+          <span>Cloudy Night</span>
         </>
       );
     case "03d":
     case "03n":
       return (
         <>
-          <FaCloud />
+          <FaCloud /><br/>
           <span> Scattered Clouds</span>
         </>
       );
@@ -106,7 +108,7 @@ export default function Search() {
     case "04n":
       return (
         <>
-          <FaCloud />
+          <FaCloud /><br/>
           <span> Broken Clouds</span>
         </>
       );
@@ -114,7 +116,7 @@ export default function Search() {
     case "09n":
       return (
         <>
-          <FaCloudRain />
+          <FaCloudRain /><br/>
           <span> It Rains!!</span>
         </> 
       );
@@ -122,7 +124,7 @@ export default function Search() {
     case "10n":
       return (
         <>
-          <FaCloudRain />
+          <FaCloudRain /><br/>  
           <span> Sprinkles! Light Rain</span>
         </>
       );
@@ -130,7 +132,7 @@ export default function Search() {
     case "11n":
       return (
         <>
-          <FaBolt />
+          <FaBolt /><br/>
           <span> Thunderstorms!!</span>
         </>
       );
@@ -138,7 +140,7 @@ export default function Search() {
     case "13n":
       return (
         <>
-          <FaCloud />
+          <FaCloud /><br/>
           <span> Snowy</span>
         </>
       );
@@ -146,38 +148,47 @@ export default function Search() {
     case "50n":
       return (
         <>
-          <FaCloud />
+          <FaCloud /><br/>
           <span> Misty</span>
         </>
       );
     default:
       return (
         <>
-          <FaSun />
-          <span> Nothing Special!</span>
+          <FaSun /><br/>
+          <div className="welcome"> WELCOME!<br/>Please Enter a location to view weather information</div>
         </>
       );
   }
 }
-
+  
 
   return (
     <>
     <form onSubmit={handleSubmit}>
       <label>What's the weather like today?</label> <br />
-      <input onChange={handleChange} type="text" placeholder="Enter Location"/>
+      <input onChange={handleChange} type="text" placeholder="Enter Location / PIN"/>
       <button type="submit">Search</button>
+      
     </form>
-    {submitClicked && (
-      <div className="weather">
-        {WeatherIcon(weatherData.icon)}
-        <div>It's actually  : {weatherData.temperature}°C</div>
-        <div>But it feels like : {weatherData.feelsLike}°C</div>
-        <div>The wind is blowing at : {weatherData.wind} M/s</div>
-        <div>Humidity : {weatherData.humidity}%</div>
-        <Quotes icon={weatherData.icon}/>
+    
+  
+    <div className="weather">
+       <div className= "icon"> {WeatherIcon(weatherData.icon)}</div>
+       {submitClicked && (      
+  <div>
+    <div className="temp"> {weatherData.temperature}°C</div>
+    <div>But it feels like  {weatherData.feelsLike}°C!</div>
+    <div>The wind is blowing at  {weatherData.wind} M/S</div>
+    <div>Humidity  {weatherData.humidity}%</div>
+    
+  </div>
+)}
+    <div className="cloud"/>
+    <Quotes icon={weatherData.icon}/> 
+        
       </div>
-    )}
+   
   </>
 
 
