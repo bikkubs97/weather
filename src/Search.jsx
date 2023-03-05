@@ -178,10 +178,11 @@ export default function Search() {
        {submitClicked && (      
   <div>
     <div className="temp"> {weatherData.temperature}°C</div>
+    <div className="details">
     <div>But it feels like  {weatherData.feelsLike}°C!</div>
     <div>The wind is blowing at  {weatherData.wind} M/S</div>
     <div>Humidity  {weatherData.humidity}%</div>
-    
+    </div>
   </div>
 )}
     <div className="cloud"/>
