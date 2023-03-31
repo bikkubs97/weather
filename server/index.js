@@ -42,7 +42,8 @@ app.get('/weather', (req, res) => {
         pressure: weatherData.main.pressure,
         humidity: weatherData.main.humidity,
         windSpeed: weatherData.wind.speed,
-        icon: weatherData.weather[0].icon
+        icon: weatherData.weather[0].icon,
+        location: weatherData.name + ', ' + weatherData.sys.country
       };
 
       res.json(data);

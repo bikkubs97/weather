@@ -46,7 +46,7 @@ input::placeholder {
 button{
     font-size:1.2rem;
     border: 0.1rem solid rgb(164, 164, 250);
-    border-radius: 10px;
+    border-radius: 12px;
 }
 button:hover{
     border: 0.15rem solid rgb(164, 164, 250);
@@ -154,4 +154,14 @@ label{
   100% {
     transform: translateX(-100%);
   }
+}
+
+.fetch{
+  text-align: center;
+  color:rgb(255, 236, 128);
+  font-size: 1.5rem;
+}
+.place{
+  font-size: 1.5rem;
+  font-weight: 700;
 }
