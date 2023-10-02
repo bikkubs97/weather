@@ -39,7 +39,7 @@ export default function Search() {
     getLatLong(query)
       .then(({ lat, lng }) => {
         axios
-          .get('https://mytodaysweatherapp.onrender.com/weather', {
+          .get('https://weather-server-mnte.onrender.com/weather', {
             params: {
               location: `${lat},${lng}`,
             },
