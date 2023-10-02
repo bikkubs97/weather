@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 body{
 
     margin: 0px;
@@ -5,10 +7,8 @@ body{
     box-sizing: border-box;
     background-size: 300%;
     background-image: linear-gradient(to bottom,#00c6fb, #053481);
-    height: 100vh;
-   
-
-     font-family: 'Lato', sans-serif;
+    height: 100vh;   
+    font-family: 'Poppins', sans-serif;
     
    
 }
