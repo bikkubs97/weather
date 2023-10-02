@@ -1,112 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
-body{
 
-    margin: 0px;
-    padding:0px;
-    box-sizing: border-box;
-    background-size: 300%;
-    background-image: linear-gradient(to bottom,#00c6fb, #053481);
-    height: 100vh;   
-    font-family: 'Poppins', sans-serif;
-    
-   
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-size: 300%;
+  background-image: linear-gradient(to bottom, #00c6fb, #053481);
+  height: 110vh;
+  overflow-y: hidden;
+  font-family: cursive;
 }
 
-.welcome{
+.welcome {
   color: aliceblue;
-  font-size:20px;
+  font-size: 20px;
   height: 46vh;
 }
 
+form {
+  margin-top: 0.8rem;
+  text-align: center;
+}
+input {
+  margin: 0.4rem;
+  font-size: 1.2rem;
+  border: 1px solid rgb(164, 164, 250);
 
-form{
-    margin-top: 0.8rem;
-    text-align: center;
+  text-align: center;
+  text-decoration: none;
+  font: 1rem;
 }
-input{
-    margin: 0.4rem;
-    font-size: 1.2rem;
-    border: 1px solid rgb(164, 164, 250);
-   
-    text-align: center;
-    text-decoration: none;
-    font: 1rem ;
-}
-input:focus{
-   
-    outline: 1px solid rgb(242, 144, 255);
-   
+input:focus {
+  outline: 1px solid rgb(242, 144, 255);
 }
 input::placeholder {
-  padding:0.8rem;
-  color: rgb(150, 150, 150); 
+  padding: 0.8rem;
+  color: rgb(150, 150, 150);
 }
 
-button{
-    font-size:1.2rem;
-    background-color:white;
-    border: 0.1rem solid rgb(164, 164, 250);
-  
+button {
+  font-size: 1.2rem;
+  background-color: white;
+  border: 0.1rem solid rgb(164, 164, 250);
 }
-button:hover{
-    border: 0.15rem solid rgb(164, 164, 250);
-    background-color:rgb(231, 231, 231);
-}
-
-label{
-    font-size: 2rem;
+button:hover {
+  background-color: rgb(255, 251, 216);
+  cursor: pointer;
 }
 
-
-
-.weather{
-
-  
-    display: block;
-    text-align: center;
-    
-   
+label {
+  font-size: 2rem;
 }
 
-.quote{
+.weather {
+  display: block;
+  text-align: center;
+}
+
+.quote {
   font-weight: bold;
-    margin: 2.2rem;
-    text-align: center;
-    font-size: 25px;
-    color:rgb(224, 224, 224);
-
-    
+  margin: 2.2rem;
+  text-align: center;
+  font-size: 25px;
+  color: rgb(224, 224, 224);
 }
-.icon{
-    margin: 0.5rem;
-    font-size: 3.5rem;
-    color: rgb(24, 14, 83);
-    font-weight: bold;
+.icon {
+  margin: 0.5rem;
+  font-size: 2rem;
+  color: rgb(0, 24, 102);
+  font-weight: bold;
 }
-.temp{
-
-    font-size: 4rem;
-    color:rgb(237, 237, 255);
-    
+.temp {
+  font-size: 2.5rem;
+  color: rgb(237, 237, 255);
+  
 }
-.temp:hover{
-
-    color:rgb(255, 236, 128);
-    
+.temp:hover {
+  color: rgb(255, 236, 128);
+  cursor: pointer;
 }
-.details{
-
+.details {
   font-size: 1.8rem;
   font-weight: lighter;
 }
-
 
 .cloud {
   position: relative;
   width: 150px;
   height: 70px;
-  left:50vw;
+  left: 50vw;
   top: 7vh;
   border-radius: 50%;
   background-color: white;
@@ -151,12 +133,12 @@ label{
   }
 }
 
-.fetch{
+.fetch {
   text-align: center;
-  color:rgb(255, 236, 128);
+  color: rgb(255, 236, 128);
   font-size: 1.5rem;
 }
-.place{
+.place {
   font-size: 1.5rem;
   font-weight: 700;
 }
