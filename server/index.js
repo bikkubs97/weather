@@ -7,6 +7,7 @@ dotenv.config();
 const app = express();
 app.use(cors())
 
+app.get('/',(req,res)=>{res.send("response")})
 app.get('/weather', (req, res) => {
   // Get location value from URL 
   const location = req.query.location;
